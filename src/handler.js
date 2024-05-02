@@ -25,7 +25,7 @@ const addNoteHandler = (request, h) => {
             },
         });
 
-        response.code = 201;
+        response.code(201);
         return response;
     }
 
@@ -34,7 +34,7 @@ const addNoteHandler = (request, h) => {
         message: 'Catatan gagal ditambahkan',
     });
 
-    response.code = 500;
+    response.code(500);
     return response;
 };
 
@@ -64,7 +64,7 @@ const getNotesByIdHandler = (request, h) => {
         message: 'Catatan tidak ditemukan',
     });
 
-    response.code = 404;
+    response.code(404);
     return response;
 };
 
@@ -88,7 +88,7 @@ const editNoteByIdHandler = (request, h) => {
             status: 'success',
             message: 'Catatan berhasil diperbarui',
         });
-        response.code = 200;
+        response.code(200);
         return response;
     }
 
@@ -96,7 +96,7 @@ const editNoteByIdHandler = (request, h) => {
         status: 'fail',
         message: 'Gagal memperbarui catatan. Id tidak ditemukan',
     });
-    response.code = 404;
+    response.code(404);
     return response;
 };
 
@@ -111,7 +111,7 @@ const deleteNoteByIdHandler = (request, h) => {
             status: 'success',
             message: 'Catatan berhasil dihapus',
         });
-        response.code = 200;
+        response.code(200);
         return response;
     }
 
@@ -119,7 +119,7 @@ const deleteNoteByIdHandler = (request, h) => {
         status: 'fail',
         message: 'Catatan gagal dihapus. Id tidak ditemukan',
     });
-    response.code = 404;
+    response.code(404);
     return response;
 };
 
